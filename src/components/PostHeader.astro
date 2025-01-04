@@ -3,7 +3,7 @@
 const {frontmatter} = Astro.props;
 ---
 <div class="post-header position-relative" style={{
-    backgroundImage: `url(${frontmatter.poster.url})`, 
+    backgroundImage: `url(../${frontmatter.poster.url})`, 
     backgroundPosition: 'center center', 
     backgroundSize: 'cover'}}>
     <div class="shadow"></div>
