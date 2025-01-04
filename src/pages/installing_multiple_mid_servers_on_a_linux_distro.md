@@ -3,7 +3,7 @@ layout: '../layouts/BlogPost.astro'
 title: 'Installing Multiple MID Servers on a Linux Distro'
 description: 'Have you ever needed to install multiple MID Servers on Linux? I’ve been able to do this and wanted to share my journey in this walk-through.'
 poster: 
-    url: '../assets/tux_and_server.png'
+    url: 'assets/tux_and_server.png'
     alt: 'Linux Tux standing by a server with coffee'
 tags: ['mid-server']
 published: '11/22/2024'

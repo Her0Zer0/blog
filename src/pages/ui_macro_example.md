@@ -3,7 +3,7 @@ layout: '../layouts/BlogPost.astro'
 title: 'UI Macro Example'
 description: 'UI Macros provide a way to add discrete scripted components to your user interface. They can assist with adding a UI Script to your form, a decoration on a field, and more'
 poster: 
-    url: '../assets/components.png'
+    url: 'assets/components.png'
     alt: 'Components'
 tags: ['scripting']
 published: '11/22/2024'
