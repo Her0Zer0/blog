@@ -3,7 +3,7 @@ layout: '../layouts/BlogPost.astro'
 title: 'Building Custom Errors'
 description: 'When building features or custom applications in ServiceNow, it is sometimes nice to have custom errors that further describe what is happening.'
 poster: 
-    url: 'assets/coder_debugging.png'
+    url: '../assets/coder_debugging.png'
     alt: 'Debugging Code Without Good Errors'
 tags: ['scripting']
 published: '11/22/2024'
