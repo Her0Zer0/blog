@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const {frontmatter} = Astro.props;
-let data = import.meta.glob('../pages/blog/*.md', {eager: true})
+let data = import.meta.glob('../pages/*.md', {eager: true})
 const posts = Object.values(data)
 
 ---
@@ -15,7 +15,7 @@ const posts = Object.values(data)
             <div class="col">
               <div class="article">
                 <div class="post-image" style={{
-                  backgroundImage: `url(${x.frontmatter.poster.url})`, 
+                  backgroundImage: `url(builtbitbybitblog/${x.frontmatter.poster.url})`, 
                   backgroundPosition: 'center center', 
                   backgroundSize: 'cover'}}></div>
                   <div class="post-content">

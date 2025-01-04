@@ -1,9 +1,9 @@
 ---
-layout: '../../layouts/BlogPost.astro'
+layout: '../layouts/BlogPost.astro'
 title: 'Add Attachments from Attachment Fields in Notifications'
 description: 'Adding attachments to out going emails that are not attached to the form header but in an attachment field on the form.'
 poster: 
-    url: 'builtbitbybitblog/assets/mail.png'
+    url: 'assets/mail.png'
     alt: 'Image of an envolope'
 tags: ['scripting', 'notifications', 'attachments']
 published: '11/22/2024'
@@ -20,7 +20,7 @@ The current process involves the Email [_sys_email_] record being created as a 
 Meaning, it is queued for send after some processing happens to gather the attachments (if needed), which are stored in the Email Attachments [_sys_email_attachment_] table and linked back to the Email [_sys_event_] record. Eventually, once all that processing takes place it picks up the email and sends the notification, changing the Type to sent.
 
 See the image below for what I have learned about this process:
-![Process Map](../../assets/notification_process_oob.png)
+![Process Map](../assets/notification_process_oob.png)
 
 To add the attachments for Attachment fields on the form, we are going to do the following.
 
