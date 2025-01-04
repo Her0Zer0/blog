@@ -1,11 +1,75 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+const {frontmatter} = Astro.props;
+let data = import.meta.glob('../pages/blog/*.md', {eager: true})
+const posts = Object.values(data)
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container">
+    <div class="row">
+      {
+        posts.map((x)=>{
+          return (
+            <div class="col">
+              <div class="article">
+                <div class="post-image" style={{
+                  backgroundImage: `url(${x.frontmatter.poster.url})`, 
+                  backgroundPosition: 'center center', 
+                  backgroundSize: 'cover'}}></div>
+                  <div class="post-content">
+                    <h2 class="h5">{x.frontmatter.title.substring(0,24)}...</h2>
+                    <p class="post-tags">{x.frontmatter.tags.map((tag)=><span class="badge rounded-pill text-bg-primary">{tag}</span>)}</p>
+                    <p class="post-published"><em><strong>Published:</strong> {x.frontmatter.published} <strong>Author:</strong> {x.frontmatter.author}</em></p>
+                    <p class="post-description">{x.frontmatter.description.substring(0,76)}...</p>
+                    <p class="post-readmore text-end m-0 mb-1 mx-3"><a class="btn btn-primary rounded-pill" href={x.url}>Read more</a></p>
+                  </div>
+              </div>
+            </div>
+          )
+        })
+      }
+    </div>
+  </div>
 </Layout>
+
+<style>
+
+  .article{
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 300px;
+    height: 490px;
+    box-shadow: 0rem .04rem 1rem rgba(172, 171, 171, 0.2);
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .post-content{
+    padding: 8px;
+  }
+
+  .post-image{
+    width: 100%;
+    min-width: 250px;
+    height: 200px;
+    border-radius: 4px;
+  }
+
+  .post-published{
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-tags span{
+    margin-right: 0.5rem;
+  }
+
+  .post-readmore{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
+</style>

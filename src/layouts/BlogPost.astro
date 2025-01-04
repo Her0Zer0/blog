@@ -1,9 +1,11 @@
 ---
 import Navbar from "../components/Navbar.astro"
+import PostHeader from '../components/PostHeader.astro'
 import Footer from '../components/Footer.astro'
 import logo from '../assets/logo/grayscale_transparent.png'
----
+const {frontmatter} = Astro.props;
 
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -16,13 +18,31 @@ import logo from '../assets/logo/grayscale_transparent.png'
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/style.css"/>
+		<link rel="stylesheet" href="../assets/css/style.css"/>
 	</head>
 	<body>
-		<Navbar/>
-		<slot />
-		<Footer/>
+    <Navbar/>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <PostHeader frontmatter={frontmatter}/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-5 px-5">
+        <slot/>
+      </div>
+    </div>
+    <Footer/>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
-</html>
+</html> 
 
+<style>
+
+  body{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+</style>

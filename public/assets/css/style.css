@@ -1,0 +1,55 @@
+
+:root{
+    --sour-gummy-font: "Sour Gummy";
+    --coming-soon: "Coming Soon";
+    --primary-accent: #FE7179;
+    --primary-bg: #1D1D1D;
+    --secondary-bg: #203D5F;
+    --primary-font-color: #fffff5;
+}
+
+body{
+    font-family: var(--coming-soon), serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    background-color: var(--primary-bg);
+    color: var(--primary-font-color);
+}
+
+h1, h2, h3, h4, h5, h6, .badge{
+    font-family: var(--sour-gummy-font), serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img{
+    width: 80% !important;
+    height: auto !important;
+}
+
+p:has(img){
+    text-align: center;
+}
+
+pre{
+    padding: 16px;
+    border-radius: 4px;
+    font-family: var(--sour-gummy-font), serif;
+}
+
+/**
+    Bootstrap overrides
+*/
+
+.bg-body-tertiary{
+    background-color: var(--primary-bg) !important;
+}
+
+.navbar-brand{
+    color: var(--primary-font-color) !important;
+}
+
+.badge.text-bg-primary, .btn-primary{
+    background-color: var(--primary-accent) !important;
+}

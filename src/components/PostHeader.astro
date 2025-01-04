@@ -1,0 +1,68 @@
+---
+
+const {frontmatter} = Astro.props;
+---
+<div class="post-header position-relative" style={{
+    backgroundImage: `url(${frontmatter.poster.url})`, 
+    backgroundPosition: 'center center', 
+    backgroundSize: 'cover'}}>
+    <div class="shadow"></div>
+    <div class="post position-relative">
+    <h2 class="h4 post-title">{frontmatter.title}</h2>
+    <p class="post-tags">{frontmatter.tags.map((x)=><span class="badge rounded-pill text-bg-primary">{x}</span>)}</p>
+    <p class="post-published"><em><strong>Author:</strong> {frontmatter.author} <strong>Published:</strong> {frontmatter.published}</em></p>
+    </div>
+</div>
+{frontmatter.imageCredit? <p><em>Image Credit: {frontmatter.imageCredit}</em></p> : ''}
+  <style>
+      .post-header{
+    margin-top: 3rem;
+    width: 100%;
+    height: 500px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: var(--coming-soon), serif;
+  }
+
+  .post{
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    height: 120px;
+    padding-left: 16px;
+    padding-top: 8px;
+    background-color: rgba(0,0,0,0.8);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .post-title,.post-tags,.post-published, .shadow{
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-tags,.post-published{
+    margin-top: 8px;
+  } 
+
+  .post-published{
+    font-size: 12px;
+  }
+
+  .post-title,.post-tags,.post-published{
+    z-index: 1000;
+    text-shadow: #ccc;
+  }
+
+  .shadow{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.1); */
+  }
+
+  .post-tags span{
+    margin-right: 0.5rem;
+  }
+  </style>
