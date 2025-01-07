@@ -3,7 +3,7 @@ layout: '../layouts/BlogPost.astro'
 title: 'Add Attachments from Attachment Fields in Notifications'
 description: 'Adding attachments to out going emails that are not attached to the form header but in an attachment field on the form.'
 poster: 
-    url: 'blog/assets/mail.png'
+    url: '/blog/assets/mail.png'
     alt: 'Image of an envolope'
 tags: ['scripting', 'notifications', 'attachments']
 published: '11/22/2024'

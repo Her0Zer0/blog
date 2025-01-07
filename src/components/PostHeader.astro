@@ -3,14 +3,14 @@
 const {frontmatter} = Astro.props;
 ---
 <div class="post-header position-relative" style={{
-    backgroundImage: `url(../${frontmatter.poster.url})`, 
+    backgroundImage: `url(${frontmatter.poster.url})`, 
     backgroundPosition: 'center center', 
     backgroundSize: 'cover'}}>
     <div class="shadow"></div>
     <div class="post position-relative">
     <h2 class="h4 post-title">{frontmatter.title}</h2>
     <p class="post-tags">{frontmatter.tags.map((x)=><span class="badge rounded-pill text-bg-primary">{x}</span>)}</p>
-    <p class="post-published"><em><strong>Author:</strong> {frontmatter.author} <strong>Published:</strong> {frontmatter.published}</em></p>
+    <p class="post-published"><em><strong>Published:</strong> {frontmatter.published}</em> <strong>Author:</strong> {frontmatter.author}</p>
     </div>
 </div>
 {frontmatter.imageCredit? <p><em>Image Credit: {frontmatter.imageCredit}</em></p> : ''}
