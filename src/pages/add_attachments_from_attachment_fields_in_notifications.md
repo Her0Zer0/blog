@@ -20,7 +20,7 @@ The current process involves the Email [_sys_email_] record being created as a 
 Meaning, it is queued for send after some processing happens to gather the attachments (if needed), which are stored in the Email Attachments [_sys_email_attachment_] table and linked back to the Email [_sys_event_] record. Eventually, once all that processing takes place it picks up the email and sends the notification, changing the Type to sent.
 
 See the image below for what I have learned about this process:
-![Process Map](../assets/notification_process_oob.png)
+![Process Map](../assets/add_attachments_from_attachment_fields_in_notifications/notification_process_oob.png)
 
 To add the attachments for Attachment fields on the form, we are going to do the following.
 

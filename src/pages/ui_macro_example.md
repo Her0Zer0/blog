@@ -72,16 +72,16 @@ The UI Macro is named view_approvers. This naming convention is important so it 
 On the sys_dictionary form, you can use the Advanced View attributes field and add (ref_contributions=view_approvers) or in the related list you can create a new Attributes record for Reference Contributions and provide view_approvers as the value.
 
 The result should look something like this.
-![Dictionary Entry Example](../assets/ref_contributions_view_approvers-1024x310.png)
+![Dictionary Entry Example](../assets/ui_macro_example/ref_contributions_view_approvers-1024x310.png)
 
 With the UI Macro active and in place you should see a button available by your Request Item field on the Catalog Task form. On click, it should direct you to the approvers listed for that Requested Item in a new window.
 
 An example of the decorator I built for this example is below.
-![View Approvers Decorator Example](../assets/view_approvers_decorator_example.png)
+![View Approvers Decorator Example](../assets/ui_macro_example/view_approvers_decorator_example.png)
 
 If you want a specific image for your decorator you can add an image by navigating to System UI > Images and adding one to the list.
 
-You can see my update set [here](../assets/UI%20Macro%20view_approvers.xml).
+You can see my update set [here](../assets/ui_macro_example/UI%20Macro%20view_approvers.xml).
 
 ### References:
 

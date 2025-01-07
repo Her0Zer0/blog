@@ -22,7 +22,8 @@ I currently have an Ubuntu Server 22.04 set up on my local machine in VirtualBox
 ## Create a MID Server User
 If you’ve not set up a MID Server before, you will need to create a user record for authentication into the ServiceNow instance. We will do this by navigating to **All > User Administration > Users**.
 
-![User Administration Modules](../assets/user_administration.png)
+![User Administration Modules](../assets/installing_multiple_mid_servers_on_a_linux_distro/user_administration.png)
+
 
 After clicking on the Users module, you should be able to see the New button in the upper right corner. Click New and fill in the following information.
 
@@ -36,19 +37,19 @@ After clicking on the Users module, you should be able to see the New button in 
 
 >**TIP**: A naming convention can be used for a User ID that further describes the service you are going to use with your MID Server. This can be handy during filtering, especially if you are using your MID Server for Discovery or Service Mapping.
 
-![Save from the context header](../assets/context-menu.png)
+![Save from the context header](../assets/installing_multiple_mid_servers_on_a_linux_distro/context-menu.png)
 
 Once saved, you will need to add the role mid_server to the account. This can be done by selecting the Roles tab at the bottom of the form. The mid_server role contains other roles, so you will see others added as well on save.
 
-![Adding the mid-server role](../assets/mid-server-role.png)
+![Adding the mid-server role](../assets/installing_multiple_mid_servers_on_a_linux_distro/mid-server-role.png)
 
 Next, navigate to **MID Server > Downloads**.
 
-![Mid-server downloads](../assets/mid-server-downloads.png)
+![Mid-server downloads](../assets/installing_multiple_mid_servers_on_a_linux_distro/mid-server-downloads.png)
 
 On the downloads page, you’ll want to check the ***Download MID Server as ZIP archive*** box and copy the link to download 64bit Linux.
 
-![Mid-server Downloads page](../assets/mid-server-downloads-pg-1024x494.png)
+![Mid-server Downloads page](../assets/installing_multiple_mid_servers_on_a_linux_distro/mid-server-downloads-pg-1024x494.png)
 
 Then log into your Linux Server either via ssh or directly in the console if available and we will begin the process of setting up our structure and first MID Server.
 
@@ -66,7 +67,7 @@ wget https://install.service-now.com/glide/distribution/builds/package/app-signe
 
 Once completed you can use the ls command to see files available to you in the current directory.
 
-![wget output](../assets/ls_home_directory_mid.png)
+![wget output](../assets/installing_multiple_mid_servers_on_a_linux_distro/ls_home_directory_mid.png)
 
 ## Installing Helpful Tools
 During the setup of my Ubuntu virtual machine, I chose to install the minimal version, so I need to install a few tools to assist in further installation. You may not need to do this.
@@ -106,7 +107,7 @@ tree /opt -L 3
 
 Once you run the tree command you should see something like this.
 
-![Tree structure](../assets/tree_structure.png)
+![Tree structure](../assets/installing_multiple_mid_servers_on_a_linux_distro/tree_structure.png)
 
 ## Configuring our Dev Agent
 
@@ -133,11 +134,11 @@ sudo nano config.xml
 
 Ctrl+X, then Y, and Enter to confirm the save and exit of the nano editor.
 
-![Config xml](../assets/config.xml_.png)
+![Config xml](../assets/installing_multiple_mid_servers_on_a_linux_distro/config.xml_.png)
 
 Once you have this set, you can then start the Mid Server and confirm a connection to your instance. You can see the new MID Server record if successful in ServiceNow by navigating to Mid Server > Servers and refreshing the list periodically during the starting process.
 
-![mid-refresh list](../assets/midserver-refresh-list-1024x272.png)
+![mid-refresh list](../assets/installing_multiple_mid_servers_on_a_linux_distro/midserver-refresh-list-1024x272.png)
 
 We will also watch the logs during the connection just to confirm there are no errors.
 
@@ -173,7 +174,7 @@ cd bin
 sudo nano mid.shconf_override
 ```
 
-![Mid Linux Config](../assets/mid-linux-config.png)
+![Mid Linux Config](../assets/installing_multiple_mid_servers_on_a_linux_distro/mid-linux-config.png)
 
 After you have saved the file, the next step is to install the daemon. You can do this by using the ./mid.sh file in the /bin folder you are currently in.
 
@@ -196,7 +197,7 @@ The last thing we need to do is Validate our MID Server in ServiceNow. This tell
 
 Click into your MID Server record and in the Related Links section click Validate.
 
-![Validate Mid-server](../assets/midserver-validate.png)
+![Validate Mid-server](../assets/installing_multiple_mid_servers_on_a_linux_distro/midserver-validate.png)
 
 Once validated, you can continue to set up your MID Server inside ServiceNow for its [Capabilities](https://www.servicenow.com/docs/bundle/xanadu-integrate-applications/page/product/mid-server/reference/r_MIDServerCapabilities.html), [IP Ranges](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/task/t_ConfigureMIDIPRange.html), and/or [Configuration Parameters](https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/mid-server/reference/mid-server-parameters.html).
 

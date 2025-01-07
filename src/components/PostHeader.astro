@@ -1,5 +1,4 @@
 ---
-
 const {frontmatter} = Astro.props;
 ---
 <div class="post-header position-relative" style={{
@@ -10,7 +9,7 @@ const {frontmatter} = Astro.props;
     <div class="post position-relative">
     <h2 class="h4 post-title">{frontmatter.title}</h2>
     <p class="post-tags">{frontmatter.tags.map((x)=><span class="badge rounded-pill text-bg-primary">{x}</span>)}</p>
-    <p class="post-published"><em><strong>Published:</strong> {frontmatter.published}</em> <strong>Author:</strong> {frontmatter.author}</p>
+    <p class="post-published"><em><strong>Published:</strong> {frontmatter.published} <strong>Author:</strong> {frontmatter.author}</em></p>
     </div>
 </div>
 {frontmatter.imageCredit? <p><em>Image Credit: {frontmatter.imageCredit}</em></p> : ''}
@@ -59,7 +58,6 @@ const {frontmatter} = Astro.props;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0,0,0,0.1); */
   }
 
   .post-tags span{

@@ -86,17 +86,17 @@ try{
 
 The _createNewErrorType_ can be set in a **Script Include** like the example below and be called anywhere you need it server side.
 
-![Create New Error Type Script Include Image](../assets/createNewErrorType.png)
+![Create New Error Type Script Include Image](../assets/building_custom_errors/createNewErrorType.png)
 
 You can also add it to a **UI Script**. However, an update to the name may be in order so your fellow devs and you won't be confused when seeing it in other scripts. We can call this one _createNewClientErrorType_.
 
-![Create New Error Type UI Script Image](../assets/createNewClientErrorType.png)
+![Create New Error Type UI Script Image](../assets/building_custom_errors/createNewClientErrorType.png)
 
 This client script is set to be used on the Desktop (platform side) and Global so it is loaded anytime a page is loaded in the platform. You should now be able to use it in your client scripts.
 
 We can test this in the console after creating the record.
 
-![Create New Error Type Script Include Image](../assets/createNewClientErrorType_console.png)
+![Create New Error Type Script Include Image](../assets/building_custom_errors/createNewClientErrorType_console.png)
 
 
 Custom errors are a great way to further describe issues that happen in your code. Using custom errors allows you to describe expected events that can be handled in very specific ways and provide your users and development team with great experiences. I hope you have enjoyed this article.
