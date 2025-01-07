@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <div class="p404 d-flex flex-column justify-content-center align-items-center">
+        <h1>404</h1>
+        <p class="text-center">Oh! Look at that! <br/><br/>It's a page that doesn't exist!<br/><br/>You will be redirected shortly...</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // window.onload = ()=> {
+        //     setTimeout(function(){
+        //         window.location.href = '/'
+        //     },5000);
+        // }
+    </script>
+</Layout>    
+<style>
+
+    .p404 {
+        height: calc(100vh - 390px);
+    }
+    h1{
+        font-size: 12rem;
+    }
+</style>
+
+
+
