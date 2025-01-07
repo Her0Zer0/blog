@@ -23,6 +23,14 @@ h1, h2, h3, h4, h5, h6, .badge{
     font-style: normal;
 }
 
+h1, h2, h3, h4, h5, h6{
+    margin-top: 3rem;
+}
+
+p, pre, ul, ol{
+    margin-bottom: 2rem;
+}
+
 img{
     width: 80% !important;
     height: auto !important;
@@ -30,6 +38,8 @@ img{
 
 p:has(img){
     text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 pre{
