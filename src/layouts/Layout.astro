@@ -51,6 +51,19 @@ const {title} = Astro.props
 					upArrow.style.opacity = '0';
 				}
 			})
+
+			/**
+			 * Because we are using markdown links we need to add events to open 
+			 * those links in new tabs. 
+			 */
+
+			 const embeddedAnchors = document.querySelectorAll('p a')
+			 for(let link of embeddedAnchors){
+				link.addEventListener('click', (e)=>{
+					e.preventDefault();
+					window.open(e.target.href, '_blank');
+				})
+			 }
 		</script>
 	</body>
 </html>

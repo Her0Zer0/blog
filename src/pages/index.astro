@@ -18,10 +18,10 @@ const posts = Object.values(data)
                   backgroundSize: 'cover'}}></div>
                   <div class="post-content">
                     <h2 class="h5">{x.frontmatter.title.substring(0,24)}...</h2>
-                    <p class="post-tags">{x.frontmatter.tags.map((tag)=><span class="badge rounded-pill text-bg-primary">{tag}</span>)}</p>
-                    <p class="post-published"><em><strong>Published:</strong> {x.frontmatter.published} <strong>Author:</strong> {x.frontmatter.author}</em></p>
-                    <p class="post-description">{x.frontmatter.description.substring(0,76)}...</p>
-                    <p class="post-readmore text-end m-0 mb-1 mx-3"><a class="btn btn-primary rounded-pill" href={x.url}>Read more</a></p>
+                    <div class="post-tags">{x.frontmatter.tags.map((tag)=><span class="badge rounded-pill text-bg-primary">{tag}</span>)}</div>
+                    <div class="post-published"><em><strong>Published:</strong> {x.frontmatter.published} <strong>Author:</strong> {x.frontmatter.author}</em></div>
+                    <div class="post-description">{x.frontmatter.description.substring(0,76)}...</div>
+                    <div class="post-readmore text-end m-0 mb-1 mx-3"><a class="btn btn-primary rounded-pill" href={x.url}>Read more</a></div>
                   </div>
               </div>
             </div>
