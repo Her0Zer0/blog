@@ -5,18 +5,13 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-    <div class="container">
-        <div class="row">
             <div class="col">
             <PostHeader frontmatter={frontmatter}/>
             </div>
-        </div>
-        </div>
         <div class="row">
         <div class="col mt-5 px-5">
             <slot/>
         </div>
-    </div>
 </Layout>
 
 

@@ -62,4 +62,5 @@ pre{
 
 .badge.text-bg-primary, .btn-primary{
     background-color: var(--primary-accent) !important;
+    border: none;
 }
