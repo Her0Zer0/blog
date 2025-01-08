@@ -49,6 +49,12 @@ pre{
     font-family: var(--sour-gummy-font), serif;
 }
 
+@media (max-width: 768px) {
+    p > img{
+        width: 100% !important;
+    }
+}
+
 /**
     Bootstrap overrides
 */
