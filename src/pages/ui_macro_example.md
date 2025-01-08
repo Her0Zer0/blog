@@ -83,7 +83,8 @@ An example of the decorator I built for this example is below.
 
 If you want a specific image for your decorator you can add an image by navigating to System UI > Images and adding one to the list.
 
-You can see my update set [here](../assets/ui_macro_example/UI%20Macro%20view_approvers.xml).
+You can see my update set [here](https://github.com/Her0Zer0/blog/blob/master/src/assets/ui_macro_example/UI%20Macro%20view_approvers.xml).
+
 
 ### References:
 
