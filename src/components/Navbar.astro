@@ -6,6 +6,7 @@ import logo from '../assets/logo/grayscale_transparent.png'
     <div class="container-fluid">
         <a class="navbar-brand" href="/blog">
             <Image src={logo} alt="Built bit by bit logo" width="300"/>
+            </a>
         <div class="d-flex">
             <a class="nav-link home-link" href="/blog">Home</a>
         </div>
@@ -33,6 +34,26 @@ a.nav-link.home-link::before{
 
 a.nav-link.home-link:hover::before{
     transform: scale(1);
+}
+
+@media(max-width: 460px){
+    .navbar{
+        align-items: center;
+    }
+
+    .navbar .container-fluid{
+        justify-content: center;
+
+    }
+
+    .navbar .container-fluid a{
+        text-align: center;
+    }
+
+    .navbar .container-fluid a img{
+        margin-left: 16px;
+    }
+
 }
 
 </style>

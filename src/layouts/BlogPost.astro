@@ -9,7 +9,7 @@ const {frontmatter} = Astro.props;
             <PostHeader frontmatter={frontmatter}/>
             </div>
         <div class="row">
-        <div class="col mt-5 px-5">
+        <div class="col mt-5 post-content">
             <slot/>
         </div>
 </Layout>
@@ -20,4 +20,22 @@ body{
     max-width: 1000px;
     margin: 0 auto;
   }
+
+.post-content{
+  word-wrap: break-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media(max-width: 768px){
+  .post-content{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .row{
+    justify-content: center;
+    margin: 0;
+  }
+}
 </style>
