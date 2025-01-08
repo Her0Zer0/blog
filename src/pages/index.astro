@@ -11,7 +11,7 @@ const posts = Object.values(data)
         posts.map((x)=>{
           if(x.frontmatter.published === '') return ''
           return (
-            <div class="col">
+            <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="article">
                 <div class="post-image" style={{
                   backgroundImage: `url(${x.frontmatter.poster.url})`, 
