@@ -6,7 +6,7 @@ poster:
     url: '/blog/assets/circuit_buildings.png'
     alt: 'A circuit board with office buildings as the chips and transistors.'
 tags: ['scripting', 'servicenow', 'rest']
-published: '01/22/2025'
+published: 
 author: 'Robert Smith'
 imageCredit: ''
 ---
