@@ -9,6 +9,7 @@ const posts = Object.values(data)
 <Layout>
       {
         posts.map((x)=>{
+          if(x.frontmatter.published === '') return ''
           return (
             <div class="col">
               <div class="article">
