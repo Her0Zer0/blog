@@ -1,7 +1,7 @@
 ---
 layout: '../layouts/BlogPost.astro'
 title: 'Creating a Unit File for VirtualBox VMs'
-description: 'When building features or custom applications in ServiceNow, it is sometimes nice to have custom errors that further describe what is happening.'
+description: 'Have you ever used VirtualBox to create VMs that need to start in a headless state? I have a home lab where I host various tools for projects'
 poster: 
     url: '/blog/assets/tux_with_unit_header.png'
     alt: 'Tux penguin pointing to a unit file'
