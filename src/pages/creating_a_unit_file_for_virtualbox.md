@@ -28,7 +28,7 @@ To be honest, I didn't do this for a long time in my career but once I did, I wi
 - [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads?data1=dwndml04&data2=abmurlvbV2) - Command line tools that allow you to manipulate the VMs. 
 - Terminal - Any terminal application will work for this and should be installed already on your distro, the important piece is just being comfortable with issuing commands in a Linux shell. Commands we will be using mostly will be [_systemctl_](https://www.man7.org/linux/man-pages/man1/systemctl.1.html) and [_vboxmanage_](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/vboxmanage-cmd-overview.html).
 
-> NOTE: It is important to get the same version of the extension pack that you have for your VirtualBox installation. Otherwise, they will not play well together. 
+> **Note**: It is important to get the same version of the extension pack that you have for your VirtualBox installation. Otherwise, they will not play well together. 
 
 ## The Virtual Machine
 The VM we'll be working with today has Ubuntu 20.04 with 1 CPU and 4GB of memory. The application installed on the OS layer is the SQL Server that I am currently using for personal development on a project for the family. When I start up my home server, of course, I want this to start up as well in the background so my application that I am building will communicate with it as needed. With that said, let's get started. 
@@ -162,3 +162,14 @@ Once the server is back up and running. Your VM should be running as expected.
 
 ## Summary: 
 If you're running a home lab with VirtualBox and need your virtual machines (VMs) to start in a headless state, creating a systemd unit file is a powerful way to automate this process on a Linux server. This post explains how to set up a unit file on a Debian-based distro like Linux Mint, ensuring VMs start automatically at boot. It covers adding your user to the vboxusers group, configuring the unit file with sections detailing service description, dependencies, user and group settings, commands to start and stop the VM, and enabling the service using systemctl. By following these steps, you can efficiently manage your VMs, making your home server setup both reliable and powerful.
+
+### References: 
+Ahao, N., & Ahao, N. (2024, July 31). Automatically start VirtualBox Virtual Machines on Boot | Baeldung on Linux. Baeldung on Linux. https://www.baeldung.com/linux/virtualbox-vm-start-on-boot
+
+Downloads – Oracle VirtualBox. (n.d.). https://www.virtualbox.org/wiki/Downloads?data1=dwndml04&data2=abmurlvbV2
+
+systemctl(1) - Linux manual page. (n.d.). https://www.man7.org/linux/man-pages/man1/systemctl.1.html
+
+Oracle VM VirtualBox User Manual. (2020, February 4). https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/vboxmanage-cmd-overview.html
+
+Systemd.unit. (n.d.). https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html

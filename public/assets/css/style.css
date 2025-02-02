@@ -6,6 +6,7 @@
     --primary-bg: #1D1D1D;
     --secondary-bg: #203D5F;
     --primary-font-color: #fffff5;
+    --border-radius-default: 4px;
 }
 
 body{
@@ -48,6 +49,13 @@ pre{
     border-radius: 4px;
     font-family: var(--sour-gummy-font), serif;
 }
+
+blockquote{
+    background-color: var(--secondary-bg);
+    padding: 8px 8px 0 8px;
+    border-radius: var(--border-radius-default);
+}
+
 
 @media (max-width: 768px) {
     p > img{
