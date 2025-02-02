@@ -3,13 +3,15 @@ import Layout from '../layouts/Layout.astro';
 const {frontmatter} = Astro.props;
 let data = import.meta.glob('../pages/*.md', {eager: true})
 const posts = Object.values(data)
-
+const showUnpublished = import.meta.env.DEV; // true if in development false if in production
 ---
 
 <Layout>
       {
+        
         posts.map((x)=>{
-          if(x.frontmatter.published === '') return ''
+          
+          if(!x.frontmatter.published && !showUnpublished) return ''
           return (
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="article">
