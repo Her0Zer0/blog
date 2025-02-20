@@ -2,7 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 const {frontmatter} = Astro.props;
 let data = import.meta.glob('../pages/*.md', {eager: true})
+
 const posts = Object.values(data)
+posts.sort((a, b)=> new Date(b.frontmatter.published) - new Date(a.frontmatter.published))
+console.log(posts)
 const showUnpublished = import.meta.env.DEV; // true if in development false if in production
 ---
 
